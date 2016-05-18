@@ -1,0 +1,85 @@
+	<div class="navbar">
+		<div data-page="index" class="navbar-inner">
+			<div class="center sliding title-color">我的预约</div>
+		</div>
+	</div>
+	<div class="pages navbar-through toolbar-through">
+		<div data-page="index" class="page">
+			<div class="page-content">
+				<div class="c-c-title">
+					<div class="content-block user-page">
+						<img src="${rc.contextPath}/$!{doctor.logo}" class="user">
+					</div>
+					<div class="content-block user-page">
+						$!{doctor.name}<span class="fontsize12">($!{doctor.title})</span>
+					</div>
+					<div class="content-block user-page">
+						<p class="doc-info">$!{doctor.summary}</p>
+					</div>
+					<div class="content-block user-page border-t">
+						<p class="doc-info">擅长：$!{doctor.skill}</p>
+					</div>
+				</div>
+				<div class="buttons-row tabs-title calendar">
+					<a id="week7" href="javascript:MyReserve(7);" class="tab-link week7 active button button-tab">
+						<div class="weeks">日</div>
+						<div class="date">7</div>
+					</a> <a id="week1" href="javascript:MyReserve(1);" class="tab-link week1 button button-tab">
+						<div class="weeks">一</div>
+						<div class="date">8</div>
+					</a> <a id="week2" href="javascript:MyReserve(2);" class="tab-link week2 button button-tab">
+						<div class="weeks">二</div>
+						<div class="date">9</div>
+					</a> <a id="week3" href="javascript:MyReserve(3);" class="tab-link week3 button button-tab">
+						<div class="weeks">三</div>
+						<div class="date">10</div>
+					</a> <a  id="week4" href="javascript:MyReserve(4)" class="tab-link week4 button button-tab">
+						<div class="weeks">四</div>
+						<div class="date">11</div>
+					</a> <a id="week5" href="javascript:MyReserve(5)" class="tab-link week5 button button-tab">
+						<div class="weeks">五</div>
+						<div class="date">12</div>
+					</a> <a id="week6" href="javascript:MyReserve(6)" class="tab-link week6 button button-tab">
+						<div class="weeks">六</div>
+						<div class="date">13</div>
+					</a>
+				</div>
+				<div class="tabs">
+					<div id="tab1" class="tab tab1 active">
+						<div class="list-block media-list tablet-inset">
+							<div class="card card-list">
+								<div class="card-content">
+									<div class="row time-tags">
+										<div class="col-50">
+											<div class="time-tag state-full">
+												<a href="javascript:Test('success')"> <span class="tag-times">09:00-12:00</span>
+													<span class="tag-state">已满</span>
+												</a>
+											</div>
+										</div>
+										<div class="col-50">
+											<div class="time-tag">
+												<a href="javascript:Test('success')"> <span class="tag-times">14:00-17:00</span>
+													<span class="tag-state">余3个预约</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<p>说明：如需医生开具药物，患者需在医生签字 加号后，至医院挂号处挂号。每位患者门诊加 号就诊时间约10-15分钟。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="tab2" class="tab tab2"></div>
+					<div id="tab3" class="tab tab3"></div>
+					<div id="tab4" class="tab tab4"></div>
+					<div id="tab5" class="tab tab5"></div>
+					<div id="tab6" class="tab tab6"></div>
+					<div id="tab7" class="tab tab7"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

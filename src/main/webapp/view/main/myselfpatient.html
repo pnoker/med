@@ -1,0 +1,65 @@
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="center title-color">我</div>
+	</div>
+</div>
+<div class="pages navbar-through toolbar-through">
+	<div data-page="index-4" class="page">
+		<div class="page-content">
+			<div class="c-c-title">
+				<div class="content-block user-page">
+					<img src="${rc.contextPath}/$!{user.wLogo}" class="user">
+				</div>
+				<div class="content-block user-page">
+					$!{user.name}<span class="fontsize12">($!{user.marry})</span>
+				</div>
+				<div class="content-block user-page">
+					<p class="doc-info">地址：$!{user.country} $!{user.province} $!{user.city}$!{user.district}$!{user.address}.</p>
+				</div>
+				<div class="content-block user-page border-t">
+					<p class="doc-info">备注：$!{user.memo}</p>
+				</div>
+			</div>
+			<div class="list-block sortable">
+				<ul>
+					<li><a href="javascript:Test('medical-record')" class="item-link">
+							<div class="item-content">
+								<div class="item-media">
+									<i class="flaticon-diploma2 icon-f7 colors-green"></i>
+								</div>
+								<div class="item-inner">
+									<div class="item-title">我的病历</div>
+								</div>
+							</div>
+							<div class="sortable-handler"></div>
+					</a></li>
+					<li><a href="javascript:Test('appointments')" class="item-link">
+							<div class="item-content">
+								<div class="item-media">
+									<i class="flaticon-pulse2 icon-f7 colors-blue"></i>
+								</div>
+								<div class="item-inner">
+									<div class="item-title">我的预约</div>
+								</div>
+							</div>
+							<div class="sortable-handler"></div>
+					</a></li>
+				</ul>
+				<ul class="mt10">
+					<li><a href="javascript:Test('help-patient')" class="item-link">
+							<div class="item-content">
+								<div class="item-media">
+									<i class="flaticon-question1 icon-f7 colors-orange"></i>
+								</div>
+								<div class="item-inner">
+									<div class="item-title">帮助和反馈</div>
+								</div>
+							</div>
+							<div class="sortable-handler"></div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+#parse("layout/defaultDoctor.html")
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Views, and they are tabs-->
+<!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+<div class="views tabs toolbar-through">
+#parse("main/myservice.html")
+#parse("main/tabbar.html")
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript"
+	src="${rc.contextPath}/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="${rc.contextPath}/js/my-app.js"></script>

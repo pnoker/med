@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="mysql-connector-java-5.0.8-bin.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<!-- 抑制警告 -->
+		<property name="suppressTypeWarnings" value="true" />
+		<!-- generate entity时，生成hashcode和equals方法 -->
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<!-- generate entity时，生成serialVersionUID -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<!-- 这个插件只会增加字符串字段映射到一个JDBC字符的方法 -->
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin" />
+		<!-- genenat entity时,生成toString -->
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/med" userId="root"
+			password="123456" />
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.sooware.med.model"
+			targetProject="src/main/med">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.sooware.med.mapping"
+			targetProject="src/main/mapping">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="com.sooware.med.dao"
+			targetProject="src/main/med" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table schema="med" tableName="user" domainObjectName="User"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="mp_user" domainObjectName="MpUser"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="mp" domainObjectName="Mp"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="mp_body" domainObjectName="MpBody"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="article" domainObjectName="Article"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="fund" domainObjectName="Fund"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="reserve" domainObjectName="Reserve"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="reserve_set" domainObjectName="ReserveSet"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+		<table schema="med" tableName="case_record" domainObjectName="CaseRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false" />
+	</context>
+</generatorConfiguration>

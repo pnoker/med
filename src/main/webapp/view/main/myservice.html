@@ -1,0 +1,98 @@
+<!-- 我的服务 -->
+<div class="view view-main">
+	<div class="navbar">
+		<div data-page="index-2" class="navbar-inner">
+			<!-- 大标题 -->
+			<div class="center sliding title-color">我的安排</div>
+		</div>
+		<div data-page="user1" class="navbar-inner cached">
+			<div class="left sliding">
+				<!-- 返回 -->
+				<a href="#" class="back link"> <i class="icon icon-back"></i></a>
+			</div>
+			<!-- <div class="center sliding title-color">$!{caseRecord.name}</div> -->
+		</div>
+	</div>
+	<div class="pages navbar-through toolbar-through">
+		<div data-page="index" class="page">
+			<div class="page-content">
+				<div class="content-block c-b-title">
+					<span class="numbers">$!{count}</span>个预约
+				</div>
+				<div class="buttons-row tabs-title calendar">
+					<a id="week7" href="javascript:MyService(7);"
+						class="tab-link week7 active button button-tab">
+						<div class="weeks">日</div>
+						<div class="date">24</div>
+					</a> <a id="week1" href="javascript:MyService(1);"
+						class="tab-link week1  button button-tab">
+						<div class="weeks">一</div>
+						<div class="date">25</div>
+					</a> <a id="week2" href="javascript:MyService(2);"
+						class="tab-link week2 button button-tab">
+						<div class="weeks">二</div>
+						<div class="date">26</div>
+					</a> <a id="week3" href="javascript:MyService(3);"
+						class="tab-link week3 button button-tab">
+						<div class="weeks">三</div>
+						<div class="date">27</div>
+					</a> <a id="week4" href="javascript:MyService(4);"
+						class="tab-link week4 button button-tab">
+						<div class="weeks">四</div>
+						<div class="date">28</div>
+					</a> <a id="week5" href="javascript:MyService(5);"
+						class="tab-link week5 button button-tab">
+						<div class="weeks">五</div>
+						<div class="date">29</div>
+					</a> <a id="week6" href="javascript:MyService(6);"
+						class="tab-link week6 button button-tab">
+						<div class="weeks">六</div>
+						<div class="date">30</div>
+					</a>
+				</div>
+				<div class="tabs">
+					<div id="tab1" class="tab tab1 active">
+						<div class="list-block media-list">
+							<ul>
+								#foreach(${patient} in ${patient})
+								<li><a
+									href="javascript:Case('$!{patient.userId}','$!{patient.id}')"
+									class="item-link item-content">
+										<div class="item-content">
+											<div class="item-media">
+												<img src="${rc.contextPath}$!{patient.wLogo}" width="70px"
+													class="user-pic">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row list-header patients">
+													<!-- 姓名 -->
+													<div class="item-title">$!{patient.name}</div>
+													<!-- 性别 -->
+													<div class="item-after">
+														<i
+															style="width: 20px; border: 3px solid; border-radius: 25px; padding: 1px; background-color: #EA186F; color: white;">$!{patient.sex}</i>
+													</div>
+													<!-- 年龄 -->
+													<div class="item-after">$!{patient.age}岁</div>
+												</div>
+												<!-- 病情描述：…… -->
+												<div class="item-subtitle color-gray">病情描述:$!{patient.description}</div>
+												<!-- 预约时间段 -->
+												<div class="order-time">$!{patient.apm}</div>
+											</div>
+										</div>
+								</a></li> #end
+							</ul>
+						</div>
+					</div>
+					<div id="tab2" class="tab tab2"></div>
+					<div id="tab3" class="tab tab3"></div>
+					<div id="tab4" class="tab tab4"></div>
+					<div id="tab5" class="tab tab5"></div>
+					<div id="tab6" class="tab tab6"></div>
+					<div id="tab7" class="tab tab7"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

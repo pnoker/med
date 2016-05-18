@@ -1,0 +1,77 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left">
+			<a href="javascript:getIndexView('myservice')" class="back link"> <i class="icon icon-back"></i><span>返回</span></a>
+		</div>
+		<div class="center sliding title-color">$!{user.name} 近期的病例</div>
+	</div>
+</div>
+<div class="page" style="
+    padding-top: 42px;">
+	<div class="page-content">	
+		<div class="content-block case-list">
+			<div class="content-block-title content-title">基本信息</div>
+			<div class="list-block mp-reset">
+				<ul>
+					<li class="item-content">
+						<div class="item-inner">
+							<div class="item-title">
+								<span class="name">$!{user.name}</span> <span class="sex color-gray"><i
+															style="margin-left:22px;width: 20px; border: 3px solid; border-radius: 25px; padding: 1px; background-color: #EA186F; color: white;">$!{user.sex}</i></span> <span
+									class="age color-gray">$!{user.age}岁</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="content-block-title content-title">病情描述</div>
+			<div class="list-block mp-reset">
+				<ul>
+					<li class="item-content">
+						<div class="item-inner">
+							<div class="item-text">
+								$!{caseRecord.description}</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="content-block-title content-title">检查检验</div>
+			<div class="list-block media-list mp-reset">
+				<ul>
+					<li><a href="#" class="item-link item-content">
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">图片资料</div>
+								</div>
+							</div>
+					</a></li>
+					<li><a href="#" class="item-link item-content">
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">化验单</div>
+								</div>
+							</div>
+					</a></li>
+					<li><a href="#" class="item-link item-content">
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-title">病例</div>
+								</div>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<div class="content-block-title content-title">医嘱</div>
+			<div class="list-block mp-reset">
+				<ul>
+					<li class="item-content">
+						<div class="item-inner">
+							<div class="item-text">
+								$!{caseRecord.memo}</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

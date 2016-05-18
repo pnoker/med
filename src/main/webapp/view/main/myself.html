@@ -1,0 +1,76 @@
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="center title-color">我</div>
+			</div>
+		</div>
+		<div class="pages navbar-through toolbar-through">
+			<div data-page="index-4" class="page">
+				<div class="page-content">
+					<div class="content-block c-c-title">
+						<a href="${rc.contextPath}/doctor/alterDoctor.do"
+							class="button btn-edit">编辑资料</a>
+						<div class="content-block user-page">
+							<img src="${rc.contextPath}$!{doctor.logo}" class="user">
+						</div>
+						<div class="content-block user-page">
+							$!{doctor.name}<span class="fontsize12">($!{doctor.title})</span>
+						</div>
+						<div class="content-block user-page padding-l-r">
+							<p class="doc-info" style="
+    padding-bottom: 10px;
+">$!{doctor.summary}...</p>
+						</div>
+						<div class="content-block user-page border-t">
+							<p class="doc-info padding-l-r">擅长：$!{doctor.skill}</p>
+						</div>
+					</div>
+					<div class="list-block sortable">
+						<ul>
+							<li><a href="javascript:Test('articles')"
+								class="item-link">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="flaticon-diploma2 icon-f7 colors-green"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-title">我的文章</div>
+										</div>
+									</div>
+									<div class="sortable-handler"></div>
+							</a></li>
+							
+							
+						</ul>
+						<ul class="mt10">
+							<li><a href="javascript:Test('set')"
+								class="item-link">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="flaticon-telephone34 icon-f7 colors-red"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-title">预约时间段设置</div>
+										</div>
+									</div>
+									<div class="sortable-handler"></div>
+							</a></li>
+							
+						</ul>
+						<ul class="mt10">
+							<li><a href="javascript:Test('help')"
+								data-page="help" class="item-link">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="flaticon-question1 icon-f7 colors-orange"></i>
+										</div>
+										<div class="item-inner">
+											<div class="item-title">帮助和反馈</div>
+										</div>
+									</div>
+									<div class="sortable-handler"></div>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>

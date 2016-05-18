@@ -1,0 +1,112 @@
+<!-- 医院新闻首页 -->
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="center sliding title-color">医院动态</div>
+		<div class="subnavbar">
+			<div class="buttons-row">
+				<a href="#xszz" class="button tab-link active">医学杂志</a><a
+					href="#xshy" class="button tab-link">医院会议</a><a href="#kzwz"
+					class="button tab-link">医生文章</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pages navbar-through">
+	<div data-page="index-1" class="page with-subnavbar">
+		<div class="page-content hide-bars-on-scroll">
+			<div class="tabs">
+				<div id="xszz" class="tab active">
+					<div class="content-block">
+						<div class="list-block media-list">
+							<ul>
+								#foreach($magazine in ${magazine})
+								<li><a
+									href="javascript:Test('content-magazine','$!{magazine.id}')"
+									class="item-link item-content">
+										<div class="item-media">
+											<img src="$!{magazine.logo}" width="80">
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title mb5">$!{magazine.title}</div>
+											</div>
+											<div class="item-subtitle">$!{magazine.upperOrg}</div>
+											<div class="item-subtitle">$!{magazine.organizer}</div>
+											<div class="order-time">$!{magazine.magWay}</div>
+										</div>
+								</a></li> #end
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="xshy" class="tab">
+					<ul style="list-style-type: none; padding-left: 0px;">
+						#foreach(${meeting} in ${meeting})
+						<li style="list-style-type: none;">
+							<div class="card">
+								<div class="card-header">$!{meeting.title}</div>
+								<div class="card-content">
+									<div class="card-content-inner">
+										<div class="item-subtitle mtb5">
+											<img src="${rc.contextPath}/images/time.png" width="18">$!{meeting.metDate}
+										</div>
+										<div class="item-subtitle mtb5">
+											<img src="${rc.contextPath}/images/loc.png" width="18">$!{meeting.metAddr}
+										</div>
+										<div class="item-subtitle mtb5">
+											<img src="${rc.contextPath}/images/bul.png" width="18">$!{meeting.organizer}
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">会议主题：$!{meeting.summary}</div>
+							</div>
+						</li> #end
+					</ul>
+				</div>
+				<div id="kzwz" class="tab">
+					<div class="content-block">
+						<!--幻灯片-->
+						<div class="swiper-container swiper-slow">
+							<div class="swiper-pagination"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="${rc.contextPath}/images/huan.jpg" width="100%"
+										height="100%" />
+								</div>
+								<div class="swiper-slide">
+									<img src="${rc.contextPath}/images/huan1.jpg" width="100%"
+										height="100%" />
+								</div>
+								<div class="swiper-slide">
+									<img src="${rc.contextPath}/images/huan2.jpg" width="100%"
+										height="100%" />
+								</div>
+							</div>
+						</div>
+						<!--eng 幻灯片-->
+						<div class="list-block media-list">
+							<ul>
+								#foreach(${article} in ${article})
+								<li><a
+									href="javascript:Test('content-article','$!{article.id}')"
+									class="item-link item-content">
+										<div class="item-media">
+											<img src="$!{article.logo}" width="100">
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title">$!{article.title}</div>
+											</div>
+											<div class="item-subtitle">$!{article.atTime}</div>
+											<div class="item-text">$!{article.summary}</div>
+										</div>
+								</a></li> #end
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

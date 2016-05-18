@@ -1,0 +1,70 @@
+<div class="navbar ">
+	<div class="navbar-inner">
+		<div class="center title-color">我的患者</div>
+	</div>
+</div>
+<div class="pages navbar-through toolbar-through">
+	<div data-page="index-3" class="page">
+
+		<div class="page-content">
+			<div class="content-block work-wiew">
+				<div class="content-block user-page">
+					<div class="row">
+						<!-- <div class="col-50">
+							<div class="buttons-row">
+								<div class="tab-link info-view colors-red">
+									<span class="line-num">112</span><span class="line-view">电话咨询</span>
+								</div>
+							</div>
+						</div> -->
+						<div class="col-100">
+							<div class="buttons-row">
+								<div class="tab-link info-view colors-blue">
+									<span class="line-num">$!{count}</span><span class="line-view">本周患者预约总数</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--card-->
+			<div class="media-list">
+				<ul style="list-style-type: none; padding-left: 0px;">
+					#foreach(${patient} in ${patient})
+					<li>
+						<div class="card">
+							<div class="card-header row no-gutter patients-list">
+								<div class="card-name">$!{patient.name}</div>
+								<div class="card-sex">
+									<i
+										style="width: 20px; border: 3px solid; border-radius: 25px; padding: 1px; background-color: #EA186F; color: white;">$!{patient.sex}</i>
+								</div>
+								<div class="card-age">$!{patient.age}岁</div>
+								<div class="card-colors">
+									<span class="dian colors-red">诊</span>
+								</div>
+							</div>
+							<div class="card-content">
+								<div class="card-content-inner">
+									<div class="item-text">病情描:$!{patient.description}</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<p >备注：$!{patient.memo}</p>
+
+								<div class="row">
+									<div class="col-100">
+										<a href="javascript:CaseMyPatient('$!{patient.userId}','$!{patient.id}')"
+											class="button button-fill button-small color-green">查看更多</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li> #end
+					<!--end card-->
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,166 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="center sliding title-color">医院动态</div>
+		<div class="subnavbar">
+			<div class="buttons-row">
+				<a href="#zjfc" class="button tab-link active">医生风采</a><a
+					href="#kzhd" class="button tab-link">医院活动</a><a href="#kzwz"
+					class="button tab-link">医院文章</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="pages navbar-through toolbar-through">
+	<div data-page="index-1" class="page with-subnavbar">
+		<div class="page-content hide-bars-on-scroll">
+			<div class="tabs">
+				<div id="zjfc" class="tab active">
+					<div class="content-block-inner tablet-inset">
+						<div class="list-block media-list">
+							<ul>
+								<li><a href="javascript:Test('doctor','$!{doctor.appId}')" class="item-link item-content">
+										<div class="item-media">
+											<img src="${rc.contextPath}/$!{doctor.logo}" width="80">
+										</div>
+										<div class="item-inner">
+											<div class="item-title-row">
+												<div class="item-title">$!{doctor.name}</div>
+											</div>
+											<div class="item-subtitle">$!{doctor.title}</div>
+											<div class="item-text">$!{doctor.summary}</div>
+										</div>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-block-inner tablet-inset">
+						<div class="card card-list">
+							<div class="card-header">
+								<a href="#" class="link"><i
+									class="flaticon-maplocation9 icon-f6 colors-red"></i>执业点</a>
+							</div>
+							<div class="card-content">
+								<p>$!{doctor.hospital}</p>
+							</div>
+						</div>
+					</div>
+					<div class="content-block-inner tablet-inset">
+						<div class="card card-list">
+							<div class="card-header">
+								<a href="#" class="link"><i
+									class="flaticon-symbol53 icon-f6 colors-blue"></i>擅长</a>
+							</div>
+							<div class="card-content">
+								<p>$!{doctor.department}</p>
+							</div>
+						</div>
+					</div>
+					<div class="buttons-row tabs-title doctor-elegant">
+						<a href="#article" class="tab-link active button button-tab">
+							<div class="weeks">文章</div>
+						</a>
+					</div>
+					<div class="tabs">
+						<!-- Tab 1, 默认激活 -->
+						<div id="article" class="tab active">
+							<div class="list-block media-list no-topborder">
+								<ul>
+								#foreach(${articledoctor} in ${articledoctor})
+									<li><a href="javascript:Test('content-article-patient','$!{articledoctor.id}')" class="item-link item-content">
+											<div class="item-media">
+												<img src="$!{articledoctor.logo}" width="100">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title">$!{articledoctor.title}</div>
+												</div>
+												<div class="item-subtitle">$!{articledoctor.atTime}</div>
+												<div class="item-text">$!{articledoctor.summary}</div>
+											</div>
+									</a></li>
+									#end
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="kzhd" class="tab">
+					<!--幻灯片-->
+					<div class="swiper-container swiper-slow">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/huan.jpg" width="100%" height="100%" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/huan.jpg" width="100%" height="100%" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/huan.jpg" width="100%" height="100%" />
+							</div>
+						</div>
+					</div>
+					<!--eng 幻灯片-->
+					<div class="list-block media-list">
+						<div class="card card-list">
+							<div class="card-content">
+								<ul class="card-list-ul">
+									#foreach(${active} in ${active})
+									<li><a href="#" class="item-link item-content">
+											<div class="item-media">
+												<img src="$!{active.logo}" width="80">
+											</div>
+											<div class="item-inner">
+												<div class="item-title-row">
+													<div class="item-title mb5">$!{active.title}</div>
+												</div>
+												<div class="item-subtitle">$!{active.summary}</div>
+												<div class="order-time">活动时间：$!{active.time}</div>
+											</div>
+									</a></li> #end
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="kzwz" class="tab">
+					<!--幻灯片-->
+					<div class="swiper-container swiper-slow">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide swiper-slide-active">
+								<img src="images/huan.jpg" width="100%" height="100%" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/hun.jpg" width="100%" height="100%" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/huan.jpg" width="100%" height="100%" />
+							</div>
+						</div>
+					</div>
+					<!--eng 幻灯片-->
+					<div class="list-block media-list">
+						<ul>
+							#foreach(${article} in ${article})
+							<li><a
+								href="javascript:Test('content-article-patient','$!{article.id}')"
+								class="item-link item-content">
+									<div class="item-media">
+										<img src="$!{article.logo}" width="100">
+									</div>
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title">$!{article.title}</div>
+										</div>
+										<div class="item-subtitle">$!{article.atTime}</div>
+										<div class="item-text">$!{article.summary}</div>
+									</div>
+							</a></li> #end
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

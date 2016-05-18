@@ -1,0 +1,27 @@
+<div class="list-block media-list">
+	<ul>
+		#foreach(${patient} in ${patient})
+		<li><a
+			href="javascript:Case('$!{patient.userId}','$!{patient.id}')"
+			class="item-link item-content">
+				<div class="item-content">
+					<div class="item-media">
+						<img src="${rc.contextPath}$!{patient.wLogo}" width="70px"
+							class="user-pic">
+					</div>
+					<div class="item-inner">
+						<div class="item-title-row list-header patients">
+							<div class="item-title">$!{patient.name}</div>
+							<div class="item-after">
+								<i
+									style="width: 20px; border: 3px solid; border-radius: 25px; padding: 1px; background-color: #EA186F; color: white;">$!{patient.sex}</i>
+							</div>
+							<div class="item-after">$!{patient.age}岁</div>
+						</div>
+						<div class="item-subtitle color-gray">病情描述:$!{patient.description}</div>
+						<div class="order-time">$!{patient.apm}</div>
+					</div>
+				</div>
+		</a></li> #end
+	</ul>
+</div>
